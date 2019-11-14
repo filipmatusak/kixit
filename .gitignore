@@ -14,3 +14,15 @@ server.pid
 *.eml
 /dist/
 .cache
+.idea/compiler.xml
+.idea/hydra.xml
+.idea/inspectionProfiles/
+.idea/libraries/
+.idea/misc.xml
+.idea/modules.xml
+.idea/modules/
+.idea/play2_project_settings.xml
+.idea/play2_settings.xml
+.idea/sbt.xml
+.idea/scala_compiler.xml
+.idea/workspace.xml
