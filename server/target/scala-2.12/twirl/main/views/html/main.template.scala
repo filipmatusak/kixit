@@ -53,7 +53,7 @@ Seq[Any](format.raw/*2.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Nov 14 19:49:34 CET 2019
+                  DATE: Fri Nov 15 15:00:29 CET 2019
                   SOURCE: /home/filip/Programovanie/Play/kixit/server/app/views/main.scala.html
                   HASH: affe0abb982d58961eb848c628144ec557c3eef4
                   MATRIX: 733->1|857->32|884->33|955->78|980->83|1064->141|1078->147|1139->188|1222->245|1236->251|1296->290|1349->317|1377->324|1409->330|1425->337|1563->453|1593->456

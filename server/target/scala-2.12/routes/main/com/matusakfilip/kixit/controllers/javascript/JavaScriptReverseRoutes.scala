@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/filip/Programovanie/Play/kixit/server/conf/routes
-// @DATE:Thu Nov 14 19:49:33 CET 2019
+// @DATE:Wed Nov 27 18:54:04 CET 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -17,6 +17,16 @@ package com.matusakfilip.kixit.controllers.javascript {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
+  
+    // @LINE:7
+    def socket: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "com.matusakfilip.kixit.controllers.Application.socket",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "ws"})
+        }
+      """
+    )
   
     // @LINE:6
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(

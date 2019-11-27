@@ -4,7 +4,7 @@
 		module="server_2.12"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20191114194550"
+		publication="20191127195202"
 	>
 		<description>
 		server
@@ -50,6 +50,8 @@
 		<dependency org="com.typesafe.play" name="play-logback_2.12" rev="2.6.15" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-akka-http-server_2.12" rev="2.6.15" conf="compile->default(compile)"/>
 		<dependency org="com.vmunier" name="scalajs-scripts_2.12" rev="1.1.2" conf="compile->default(compile)"/>
+		<dependency org="net.debasishg" name="redisclient_2.12" rev="3.9" conf="compile->default(compile)"/>
+		<dependency org="com.lihaoyi" name="upickle_2.12" rev="0.8.0" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-guice_2.12" rev="2.6.15" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-specs2_2.12" rev="2.6.15" conf="test->default(compile)"/>
 	</dependencies>

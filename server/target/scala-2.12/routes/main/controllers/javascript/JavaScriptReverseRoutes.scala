@@ -1,16 +1,16 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/filip/Programovanie/Play/kixit/server/conf/routes
-// @DATE:Thu Nov 14 19:49:33 CET 2019
+// @DATE:Wed Nov 27 18:54:04 CET 2019
 
 import play.api.routing.JavaScriptReverseRoute
 
 
 import _root_.controllers.Assets.Asset
 
-// @LINE:9
+// @LINE:10
 package controllers.javascript {
 
-  // @LINE:9
+  // @LINE:10
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -18,7 +18,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:9
+    // @LINE:10
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -28,7 +28,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:10
+    // @LINE:11
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

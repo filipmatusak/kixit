@@ -4,6 +4,7 @@
 
 # Home page
 GET        /                             com.matusakfilip.kixit.controllers.Application.index
+GET        /ws                           com.matusakfilip.kixit.controllers.Application.socket
 
 # Prefix must match `play.assets.urlPrefix`
 GET        /assets/*file                 controllers.Assets.at(file)

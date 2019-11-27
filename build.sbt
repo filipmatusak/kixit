@@ -1,4 +1,5 @@
-import sbtcrossproject.{crossProject, CrossType}
+import sbt.Keys.libraryDependencies
+import sbtcrossproject.{CrossType, crossProject}
 
 lazy val server = (project in file("server")).settings(commonSettings).settings(
   scalaJSProjects := Seq(client),
@@ -8,6 +9,8 @@ lazy val server = (project in file("server")).settings(commonSettings).settings(
   compile in Compile := ((compile in Compile) dependsOn scalaJSPipeline).value,
   libraryDependencies ++= Seq(
     "com.vmunier" %% "scalajs-scripts" % "1.1.2",
+    "net.debasishg" %% "redisclient" % "3.9",
+    "com.lihaoyi" %% "upickle" % "0.8.0",
     guice,
     specs2 % Test
   ),
@@ -19,7 +22,9 @@ lazy val server = (project in file("server")).settings(commonSettings).settings(
 lazy val client = (project in file("client")).settings(commonSettings).settings(
   scalaJSUseMainModuleInitializer := true,
   libraryDependencies ++= Seq(
-    "org.scala-js" %%% "scalajs-dom" % "0.9.5"
+    "org.scala-js" %%% "scalajs-dom" % "0.9.5",
+    "com.lihaoyi" %%% "scalatags" % "0.7.0",
+    "com.lihaoyi" %%% "upickle" % "0.8.0"
   )
 ).enablePlugins(ScalaJSPlugin, ScalaJSWeb).
   dependsOn(sharedJs)
@@ -28,6 +33,11 @@ lazy val shared = crossProject(JSPlatform, JVMPlatform)
   .crossType(CrossType.Pure)
   .in(file("shared"))
   .settings(commonSettings)
+  .settings(
+    libraryDependencies ++= Seq(
+      "com.lihaoyi" %%% "upickle" % "0.8.0"
+    )
+  )
 lazy val sharedJvm = shared.jvm
 lazy val sharedJs = shared.js
 
