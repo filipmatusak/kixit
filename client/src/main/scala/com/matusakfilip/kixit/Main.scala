@@ -12,7 +12,7 @@ import upickle.default._
 object Main {
   val context = new Context
 
-  val wsUrl = s"ws://${window.location.host}/ws"
+  val wsUrl = window.location.origin.toString.replace("http", "ws") + "/ws"
   val ws = new WebSocket(wsUrl)
 
   def send(wSMessage: WSMessage): Unit =
